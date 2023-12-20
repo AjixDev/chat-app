@@ -21,7 +21,7 @@ async function loadChatHistory() {
     return JSON.parse(chatHistory);
   } catch (err) {
     console.info(
-      "\x1b[34mChat history file doesn't exist yet. It will be created when new messages are saved.\x1b[0m"
+      "\x1b[34mMessage for dev: chat history JSON file doesn't exist yet. It will be created on first send submition.\x1b[0m"
     );
 
     return []; // Start with an empty array if file doesn't exist

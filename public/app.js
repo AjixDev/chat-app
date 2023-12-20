@@ -85,7 +85,7 @@
       let el = document.createElement("div");
       el.setAttribute("class", "message my-message");
       el.innerHTML = `
-          <div>
+          <div class="rounded">
             <div class="name">You</div>
             <div class="text">${message.text}</div>
           </div>
@@ -96,7 +96,7 @@
       let el = document.createElement("div");
       el.setAttribute("class", "message other-message");
       el.innerHTML = `
-          <div>
+          <div class="rounded">
             <div class="name">${message.username}</div>
             <div class="text">${message.text}</div>
           </div>
