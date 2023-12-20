@@ -62,7 +62,7 @@ body {
 
 .join-screen-footer-container>footer {
   position: absolute;
-  top: 95%;
+  top: 94%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
