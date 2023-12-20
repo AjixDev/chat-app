@@ -17,8 +17,8 @@ body {
   height: 100%;
   max-width: 600px;
   background: #fff;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 1px solid #0084ff;
+  border-right: 1px solid #0084ff;
 }
 
 .app>.screen {
@@ -49,9 +49,13 @@ body {
   margin-bottom: 20px;
   font-size: 30px;
   color: #111;
-  border-bottom: 4px solid #0dcaf0;
+  border-bottom: 4px solid #0084ff;
   padding: 5px 0px;
   display: inline-block;
+}
+
+#message-input {
+  margin: 0 3px;
 }
 
 .screen .form-input label {
@@ -68,7 +72,8 @@ body {
 
 .screen .form-input button {
   padding: 10px 20px;
-  color: #000;
+  color: #fff;
+  background-color: #0084ff;
   font-size: 16px;
   cursor: pointer;
   outline: none;
@@ -86,7 +91,7 @@ body {
 
 .chat-screen .header .logo {
   font-size: 18px;
-  color: #0dcaf0;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -129,7 +134,7 @@ body {
 
 .chat-screen .messages .message .name {
   font-size: 13px;
-  color: #0dcaf0;
+  color: #0084ff;
   margin-bottom: 5px;
 }
 
@@ -158,7 +163,7 @@ body {
 .chat-screen .typebox button {
   width: 80px;
   height: 100%;
-  background: #111;
+  background: #0084ff;
   color: #eee;
   font-size: 16px;
   outline: none;
