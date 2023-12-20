@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChatApp</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <h2>Join Chatroom</h2>
         <div class="form-input">
           <label for="username">Username</label>
-          <input type="text" id="username">
+          <input type="text" id="username" autocomplete="username">
         </div>
         <div class="form-input">
           <button id="join-user">Join</button>
@@ -31,7 +32,7 @@
 
       </div>
       <div class="typebox">
-        <input type="text" id="message-input">
+        <input type="text" id="message-input" autocomplete="off">
         <button id="send-message">Send</button>
       </div>
     </div>
