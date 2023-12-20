@@ -65,14 +65,16 @@
       window.location.href = window.location.href;
     });
 
-  // Update my message socket
   socket.on("update", function (update) {
     renderMessage("update", update);
   });
 
-  // Update others message socket
   socket.on("chat", function (message) {
     renderMessage("other", message);
+  });
+
+  socket.on("clearHistory", () => {
+    localStorage.clear(); // Clear localStorage on the client
   });
 
   // Render messages to the DOM
