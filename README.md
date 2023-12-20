@@ -22,7 +22,7 @@ npm install
 
 ```bash
 npm start
-Open the app in your browser: http://localhost:5000
+Open the app in your browser: [http://localhost:5000](http://localhost:5000)
 
 ```
 
