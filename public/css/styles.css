@@ -54,6 +54,26 @@ body {
   display: inline-block;
 }
 
+.join-screen-footer-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.join-screen-footer-container>footer {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #0084ff;
+}
+
 #message-input {
   margin: 0 3px;
 }
