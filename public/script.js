@@ -7,35 +7,55 @@
   // Join button functionality
   app
     .querySelector(".join-screen #join-user")
-    .addEventListener("click", function () {
-      let username = app.querySelector(".join-screen #username").value;
-      if (username.length == 0) {
-        return;
+    .addEventListener("click", joinUser);
+  app
+    .querySelector(".join-screen #username")
+    .addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent form submission if applicable
+        joinUser();
       }
-      socket.emit("newuser", username);
-      uname = username;
-      app.querySelector(".join-screen").classList.remove("active");
-      app.querySelector(".chat-screen").classList.add("active");
     });
+
+  function joinUser() {
+    let username = app.querySelector(".join-screen #username").value;
+    if (username.length == 0) {
+      return;
+    }
+    socket.emit("newuser", username);
+    uname = username;
+    app.querySelector(".join-screen").classList.remove("active");
+    app.querySelector(".chat-screen").classList.add("active");
+  }
 
   // Send button functionality
   app
     .querySelector(".chat-screen #send-message")
-    .addEventListener("click", function () {
-      let message = app.querySelector(".chat-screen #message-input").value;
-      if (message.length == 0) {
-        return;
+    .addEventListener("click", sendMessage);
+  app
+    .querySelector(".chat-screen #message-input")
+    .addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent default form submission behavior
+        sendMessage();
       }
-      renderMessage("my", {
-        username: uname,
-        text: message,
-      });
-      socket.emit("chat", {
-        username: uname,
-        text: message,
-      });
-      app.querySelector(".chat-screen #message-input").value = "";
     });
+
+  function sendMessage() {
+    let message = app.querySelector(".chat-screen #message-input").value;
+    if (message.length == 0) {
+      return;
+    }
+    renderMessage("my", {
+      username: uname,
+      text: message,
+    });
+    socket.emit("chat", {
+      username: uname,
+      text: message,
+    });
+    app.querySelector(".chat-screen #message-input").value = "";
+  }
 
   // Exit button functionality
   app
